@@ -15,11 +15,12 @@ const Comments = (props) => {
 
     return (
         <div className="comment">
-            <div style={{display:"flex"}} >
+            <div style={{ display: "flex" }} >
                 <img style={{ borderRadius: "50%", width: "50px" }} src={img.medium} alt="" />
-                <p style={{margin:'10px'}}><b>{name}</b></p>
+               
+                <p style={{ margin: '10px' }}><b>{name}</b></p>
             </div>
-
+            <p><small>{email}</small></p>
             <p>{body}</p>
         </div>
     );

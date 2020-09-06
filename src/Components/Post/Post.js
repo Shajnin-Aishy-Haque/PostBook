@@ -26,7 +26,7 @@ const Post = (props) => {
 
     const classes = useStyles();
     return (
-        <div className="post">
+        <div style={{margin:"60px 600px"}}>
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardContent>

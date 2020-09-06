@@ -10,34 +10,41 @@ import {
 } from "react-router-dom";
 import PostDetail from './Components/Post/PostDetail/PostDetail';
 import NoMatch from './Components/NoMatch/NoMatch';
+import LogIn from './Components/LogIn/LogIn';
+import LogOut from './Components/LogOut/LogOut';
 function App() {
   return (
     <div className="app">
-      <Header></Header>
+    
 
       <Router>
-      <Switch>
-        <Route path="/Home">
-          <Home />
-        </Route>
-<Route path="/post/:id">
-<PostDetail></PostDetail>
-</Route>
-        <Route exact path="/">
-          <Home />
-        </Route>
 
-        
+      <Header></Header>
+        <Switch>
+          <Route path="/Home">
+            <Home />
+          </Route>
+          <Route path="/post/:id">
+            <PostDetail></PostDetail>
+          </Route>
+          <Route path="/login">
+            <LogIn></LogIn>
+          </Route>
+          <Route path="/logout">
+            <LogOut></LogOut>
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="*">
+            <NoMatch></NoMatch>
+          </Route>
 
-        <Route path="*">
-          <NoMatch></NoMatch>
-        </Route>
-
-      </Switch>
+        </Switch>
 
 
       </Router>
-     
+
     </div>
   );
 }
